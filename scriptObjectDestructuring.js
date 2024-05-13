@@ -24,14 +24,3 @@ const {
   },
   profilePicture: profilePicture = "This user doeasn't have a profile picture!",
 } = newEmplyee;
-
-// console.log(newEmplyee);
-console.log(firstName);
-console.log(lastName);
-console.log(age);
-console.log(employeeID);
-console.log(employeeCardNumber);
-console.log(email);
-console.log(phonePrefix);
-console.log(phone);
-console.log(profilePicture);
