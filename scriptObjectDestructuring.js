@@ -17,22 +17,21 @@ const {
   age,
   employeeID,
   employeeCardNumber = "This user haven't got a valid card yet!",
-  contactInfo,
-  profilePicture: profilePicture = "This user doeasn't have a profile picture!",
-} = newEmplyee;
-
-const {
+  contactInfo: {
     email,
     countryPhonePrefix: phonePrefix,
     phone
-} = contactInfo
+  },
+  profilePicture: profilePicture = "This user doeasn't have a profile picture!",
+} = newEmplyee;
+
 // console.log(newEmplyee);
-// console.log(lastName);
-// console.log(age);
-// console.log(employeeID);
-// console.log(employeeCardNumber);
-console.log(contactInfo);
+console.log(firstName);
+console.log(lastName);
+console.log(age);
+console.log(employeeID);
+console.log(employeeCardNumber);
 console.log(email);
 console.log(phonePrefix);
 console.log(phone);
-// console.log(profilePicture);
+console.log(profilePicture);
