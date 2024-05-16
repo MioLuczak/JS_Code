@@ -88,3 +88,10 @@ function searchProductsToPriceLimit(limitPrice) {
     })
 }
 
+// Function for pretty displaying in console
+function prettyDisplay(showName, showPrice) {
+    console.log(`Product: ${showName}; Price: ${showPrice}`)
+}
+
+console.log(`Showing available products meeting search criteria: price < ${limitPrice}`);
+searchProductsToPriceLimit(limitPrice);
