@@ -62,8 +62,7 @@ const products = [
   },
 ];
 // Replica of original products array
-// const productsDuplicate = [].concat(products);
-const productsDuplicate = [...products];
+const productsDuplicate = structuredClone(products);
 
 // Changing the stock value to 0 if the products isn't available
 productsDuplicate.forEach((element) => {
