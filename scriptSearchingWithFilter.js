@@ -61,3 +61,13 @@ products: [
     stock: 62,
   },
 ];
+
+function searchProductsToPriceLimit(limitPrice) {
+    products.forEach((element) => {
+        if (element.available === true) {
+            if (element.price < limitPrice) {
+                return element.name;
+            }
+        }
+    })
+}
