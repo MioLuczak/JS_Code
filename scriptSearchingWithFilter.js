@@ -1,5 +1,5 @@
 // Generated random array from JSONGenerator
-products: [
+const products = [
   {
     name: "Unbranded Metal Bacon",
     price: 67.0,
