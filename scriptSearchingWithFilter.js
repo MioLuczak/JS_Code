@@ -71,6 +71,12 @@ productsDuplicate.forEach((element) => {
     }
 })
 
+// Implementing prompt to established limitprice
+let limitPrice = '';
+do {
+    limitPrice = prompt('Input upper price limit:');
+} while (isNaN(limitPrice) || limitPrice === null);
+
 // Function that returns products that meets pricelimit criteria
 function searchProductsToPriceLimit(limitPrice) {
     productsDuplicate.forEach((element) => {
@@ -82,10 +88,3 @@ function searchProductsToPriceLimit(limitPrice) {
     })
 }
 
-// searchProductsToPriceLimit(100);
-// console.log('');
-// searchProductsToPriceLimit(300);
-// console.log('');
-// searchProductsToPriceLimit(600);
-console.log(products);
-console.log(productsDuplicate);
