@@ -78,11 +78,11 @@ do {
 } while (isNaN(limitPrice) || limitPrice === null);
 
 // Function that returns products that meets pricelimit criteria
-function searchProductsToPriceLimit(limitPrice) {
+function searchProductsToPriceLimit(limitPrice, callback) {
     productsDuplicate.forEach((element) => {
         if (element.available === true) {
             if (element.price < limitPrice) {
-                console.log(element.name);
+                return callback(element.name, element.price);
             }
         }
     })
@@ -93,5 +93,5 @@ function prettyDisplay(showName, showPrice) {
     console.log(`Product: ${showName}; Price: ${showPrice}`)
 }
 
-console.log(`Showing available products meeting search criteria: price < ${limitPrice}`);
-searchProductsToPriceLimit(limitPrice);
+console.log(`Showing available products meeting search criteria: Price < ${limitPrice}`);
+searchProductsToPriceLimit(limitPrice, prettyDisplay);
