@@ -61,13 +61,32 @@ const products = [
     stock: 62,
   },
 ];
+// Replica of original products array
+// const productsDuplicate = [].concat(products);
+const productsDuplicate = [...products];
 
+// Changing the stock value to 0 if the products isn't available
+productsDuplicate.forEach((element) => {
+    if(element.available === false) {
+        element.stock = 0
+    }
+})
+
+// Function that returns products that meets pricelimit criteria
 function searchProductsToPriceLimit(limitPrice) {
-    products.forEach((element) => {
+    productsDuplicate.forEach((element) => {
         if (element.available === true) {
             if (element.price < limitPrice) {
-                return element.name;
+                console.log(element.name);
             }
         }
     })
 }
+
+// searchProductsToPriceLimit(100);
+// console.log('');
+// searchProductsToPriceLimit(300);
+// console.log('');
+// searchProductsToPriceLimit(600);
+console.log(products);
+console.log(productsDuplicate);
