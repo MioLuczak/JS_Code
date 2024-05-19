@@ -9,5 +9,3 @@ function findEvenNumbers(arr) {
     return 'Not found';
   }
 }
-  
-console.log(findEvenNumbers(numbers));
