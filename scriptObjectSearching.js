@@ -17,9 +17,19 @@ const groceryStoreProducts = [
   { name: 'Pork', category: 'Meat', isAvailable: true },
 ];
 
-function searchWithName(nameToSearch) {
-    const result = Array.from(groceryStoreProducts.filter(element => element.name == nameToSearch));
-  if (result.length > 0) { return result } 
-  else { return 'Not found' };
-  
+
+function searchInGoods(arrToSearch, argToSearch) {
+  const arr = Array.from(arrToSearch);
+  let arg = [];
+  if (arr.find(element => element.category == argToSearch)) {
+    const result = arr.filter(element => element.category == argToSearch);
+    arg = result;
+  } else
+  if ((argToSearch !== undefined)) {
+    const result = arr.filter(element => element.name == argToSearch);
+    arg = result;
+  };
+  if (arg.length <= 0) {
+    return 'Not found';
+  } else { return arg }
 };
