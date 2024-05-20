@@ -19,5 +19,7 @@ const groceryStoreProducts = [
 
 function searchWithName(nameToSearch) {
     const result = Array.from(groceryStoreProducts.filter(element => element.name == nameToSearch));
-    return result;
+  if (result.length > 0) { return result } 
+  else { return 'Not found' };
+  
 };
