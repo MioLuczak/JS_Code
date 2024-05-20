@@ -22,12 +22,13 @@ function searchInGoods(arrToSearch, argToSearch) {
   const arr = Array.from(arrToSearch);
   let arg = [];
   if (arr.find(element => element.category == argToSearch)) {
-    const result = arr.filter(element => element.category == argToSearch);
-    arg = result;
+    arg = arr.filter(element => element.category == argToSearch);
   } else
   if ((argToSearch !== undefined)) {
-    const result = arr.filter(element => element.name == argToSearch);
-    arg = result;
+    arg = arr.filter(element => element.name == argToSearch);
+  } 
+  if (typeof(argToSearch) == 'boolean') {
+    arg = arr.filter(element => element.isAvailable == argToSearch);
   };
   if (arg.length <= 0) {
     return 'Not found';
