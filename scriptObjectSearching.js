@@ -16,3 +16,8 @@ const groceryStoreProducts = [
   { name: 'Chicken breast', category: 'Meat', isAvailable: true },
   { name: 'Pork', category: 'Meat', isAvailable: true },
 ];
+
+function searchWithName(nameToSearch) {
+    const result = Array.from(groceryStoreProducts.filter(element => element.name == nameToSearch));
+    return result;
+};
