@@ -11,7 +11,7 @@ const people = [
   {
     id: "664c4e9ffd8ca93ad45a6b1c",
     isActive: true,
-    age: 32,
+    age: 16,
     firstname: "Vivian",
     lastname: "Weber",
     email: "vivianweber@poochies.com"
@@ -43,7 +43,7 @@ const people = [
   {
     id: "664c4e9f9fbe7e4a6c44676f",
     isActive: false,
-    age: 36,
+    age: 17,
     firstname: "Patterson",
     lastname: "Petty",
     email: "pettypatterson@poochies.com"
@@ -59,7 +59,7 @@ const people = [
   {
     id: "664c4e9f2588ca93b25c9fa7",
     isActive: true,
-    age: 38,
+    age: 16,
     firstname: "Vaughan",
     lastname: "Landry",
     email: "landryvaughan@poochies.com"
@@ -75,9 +75,17 @@ const people = [
   {
     id: "664c4e9f3ebf841b23d8638d",
     isActive: false,
-    age: 38,
+    age: 17,
     firstname: "Taylor",
     lastname: "House",
     email: "housetaylor@poochies.com"
   }
-]
+];
+
+function getNamesOfAdults(arr) {
+  const result = Array.from(
+    arr.filter((element) => element.age >= 18).map((element) => element.firstname)
+  );
+  return result;
+};
+getNamesOfAdults(people);
