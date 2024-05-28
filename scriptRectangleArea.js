@@ -7,3 +7,6 @@ class Rectangle {
     return this.width * this.height;
   }
 }
+
+let myRectangle = new Rectangle(2, 3);
+console.log(myRectangle.area());
