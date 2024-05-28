@@ -4,4 +4,8 @@ class Counter {
       this.number = startFrom;
     } else this.number = 0;
   }
+
+  increment() {
+    this.number++;
+  }
 }
